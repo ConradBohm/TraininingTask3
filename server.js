@@ -10,19 +10,19 @@ app.set('view engine','pug');
 app.set('views','./views');
 
 app.get('/', function(req,res){
-    res.render('index')
+    res.render('calculator')
 });
 
 app.post('/', function(req,res){
-    console.log(req.body.sum)
-    var useSum = req.body.sum
+    console.log(req.body.display)
+    var sum = req.body.display
     var options = {
         scriptPath: 'python/scripts/',
-        args: [useSum]
+        args: [sum]
     }
     PythonShell.run('calc.py', options, function(err, results){
         if (err) throw err;
-        res.render('index', {results: results})
+        res.render('calculator', {results: results})
     })
 });
 
