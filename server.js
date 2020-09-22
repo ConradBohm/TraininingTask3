@@ -17,7 +17,7 @@ app.post('/', function(req,res){
     console.log(req.body.sum)
     var useSum = req.body.sum
     var options = {
-        scriptPath: '.',
+        scriptPath: 'python/scripts/',
         args: [useSum]
     }
     PythonShell.run('calc.py', options, function(err, results){
