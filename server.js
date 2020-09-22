@@ -3,10 +3,6 @@ var app = express();
 var bodyParser = require('body-parser')
 let {PythonShell} = require('python-shell');
 
-var options = {
-    args: ['sum']
-}
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -26,7 +22,7 @@ app.post('/', function(req,res){
     }
     PythonShell.run('calc.py', options, function(err, results){
         if (err) throw err;
-        console.log('completed computation ', results);
+        res.render('index', {results: results})
     })
 });
 
