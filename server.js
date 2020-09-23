@@ -16,6 +16,9 @@ app.get('/', function(req,res){
 app.post('/', function(req,res){
     console.log(req.body.display)
     var sum = req.body.display
+    if (sum === ""){
+        sum = "0"
+    }
     var options = {
         scriptPath: 'python/scripts/',
         args: [sum]
