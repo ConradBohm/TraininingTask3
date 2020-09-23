@@ -41,7 +41,7 @@ form(method='post' name='calculator' action="/")
         input(type='button' name='multiply' value='*' onclick="calculator.display.value += '*'")
     tr
       td
-        input(type='button' name='clear' value='C' onclick="calculator.display.value = ''")
+        input(type='button' id = 'clear' name='clear' value='C' onclick="calculator.display.value = ''")
       td
         input(type='button' name='zero' value='0' onclick="calculator.display.value += '0'")
       td

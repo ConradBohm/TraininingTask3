@@ -1,6 +1,26 @@
 body {
-    font-size: 14px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: green;
     background-color: papayawhip;
+}
+
+table {
+    background-color: #222222;
+}
+
+input {
+    outline: 0;
+    background-color: white;
+    display: inline-block;
+    font-size: 20px;
+    width: 60px;
+    height: 50px;
+    margin: 3px;
+}
+
+#display {
+    width: 265px;
+    max-width: 270px;
+}
+
+#clear {
+    background-color: #ff9fa8;
 }
