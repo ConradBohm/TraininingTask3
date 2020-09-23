@@ -4,12 +4,14 @@ head
   style 
     include stylesheets/index.css
 
+script results='0'
+
 body    
 form(method='post' name='calculator' action="/")
   table
     tr
       td(colspan=4)
-        input#display(type='text' name='display')
+        input#display(type='text' name='display' value=results[0])
     tr
       td
         input(type='button' name='one' value='1' onclick="calculator.display.value += '1'")
@@ -46,5 +48,3 @@ form(method='post' name='calculator' action="/")
         input(type='submit' name='equals' value='=')
       td
         input(type='button' name='divide' value='/' onclick="calculator.display.value += '/'")
-h3 Result
-td=results

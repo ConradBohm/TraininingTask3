@@ -4,15 +4,3 @@ body {
     color: green;
     background-color: papayawhip;
 }
-
-h3 {
-    margin: 40px;
-    padding: 40px;
-    font-size: 20px;
-    background-color: purple;
-    border-style: groove;
-    border-radius: 10px;
-    border-width: 5px;
-    border-left-width: 10px;
-    border-right-width: 10px;
-}
